@@ -12,6 +12,8 @@
 		BF9D88B320CE296200A669B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9D88B120CE296200A669B7 /* Main.storyboard */; };
 		BF9D88B520CE296400A669B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9D88B420CE296400A669B7 /* Assets.xcassets */; };
 		BF9D88B820CE296400A669B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9D88B620CE296400A669B7 /* LaunchScreen.storyboard */; };
+		BF9D88C020CF176900A669B7 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D88BF20CF176900A669B7 /* GroupViewController.swift */; };
+		BF9D88C220CF178F00A669B7 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D88C120CF178F00A669B7 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		BF9D88B420CE296400A669B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9D88B720CE296400A669B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9D88B920CE296400A669B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9D88BF20CF176900A669B7 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		BF9D88C120CF178F00A669B7 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				BF9D88AD20CE296200A669B7 /* AppDelegate.swift */,
 				BF9D88AF20CE296200A669B7 /* ViewController.swift */,
+				BF9D88BF20CF176900A669B7 /* GroupViewController.swift */,
+				BF9D88C120CF178F00A669B7 /* AlarmViewController.swift */,
 				BF9D88B120CE296200A669B7 /* Main.storyboard */,
 				BF9D88B420CE296400A669B7 /* Assets.xcassets */,
 				BF9D88B620CE296400A669B7 /* LaunchScreen.storyboard */,
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9D88C220CF178F00A669B7 /* AlarmViewController.swift in Sources */,
+				BF9D88C020CF176900A669B7 /* GroupViewController.swift in Sources */,
 				BF9D88B020CE296200A669B7 /* ViewController.swift in Sources */,
 				BF9D88AE20CE296200A669B7 /* AppDelegate.swift in Sources */,
 			);
@@ -290,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amreinhard.Alarmadillo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amreinhard.Alarmadillo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
