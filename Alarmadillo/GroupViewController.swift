@@ -60,7 +60,7 @@ class GroupViewController: UITableViewController, UITextFieldDelegate {
     func createGroupCell(for indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Editable", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EditableText", for: indexPath)
             
             if let cellTextField = cell.viewWithTag(1) as? UITextField {
                 cellTextField.text = group.name
@@ -103,6 +103,7 @@ class GroupViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         group.alarms.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+        save()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -113,6 +114,7 @@ class GroupViewController: UITableViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         group.name = textField.text!
         title = group.name
+        save()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -125,6 +127,11 @@ class GroupViewController: UITableViewController, UITextFieldDelegate {
         group.alarms.append(newAlarm)
         
         performSegue(withIdentifier: "EditAlarm", sender: newAlarm)
+        save()
+    }
+    
+    @objc func save() {
+        NotificationCenter.default.post(name: Notification.Name("save"), object: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -148,5 +155,6 @@ class GroupViewController: UITableViewController, UITextFieldDelegate {
         } else {
             group.enabled = sender.isOn
         }
+        save()
     }
 }
